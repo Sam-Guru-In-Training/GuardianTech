@@ -68,13 +68,14 @@
             tools:text="Long placeholder location that should wrap to more than 2 lines of text" />
 
     </LinearLayout>
-
+<!--
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="bottom"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
         android:orientation="vertical">
 
         <TextView
@@ -86,14 +87,8 @@
             android:textSize="12sp"
             tools:text="article" />
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:textColor="@color/textColorEarthquakeDetails"
-            android:textSize="12sp"
-            tools:text="3:00 PM" />
+
 
     </LinearLayout>
+    -->
 </LinearLayout>
