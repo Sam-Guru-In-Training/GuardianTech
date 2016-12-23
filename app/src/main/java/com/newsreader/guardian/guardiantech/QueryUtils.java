@@ -154,9 +154,7 @@ public final class QueryUtils {
 
             // Extract the JSONArray associated with the key called "features",
             // which represents a list of features (or earthquakes).
-            Log.wtf(LOG_TAG, "trying for json response object");
             JSONObject response = baseJsonResponse.getJSONObject("response");
-            Log.wtf(LOG_TAG, "trying for json results array");
             JSONArray newsStoryArray = response.getJSONArray("results");
 
             // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
@@ -164,22 +162,16 @@ public final class QueryUtils {
 
                 // Get a single earthquake at position i within the list of earthquakes
                 JSONObject currentNewsStory = newsStoryArray.getJSONObject(i);
-                Log.wtf(LOG_TAG, "got json NewsStory object");
                 // For a given earthquake, extract the JSONObject associated with the
                 // key called "properties", which represents a list of all properties
                 // for that earthquake.
                 //JSONObject properties = currentNewsStory.getJSONObject("properties");
 
                 String title = currentNewsStory.getString("webTitle");
-                Log.wtf(LOG_TAG, "got webTitle");
                 String sectionName = currentNewsStory.getString("sectionName");
-                Log.wtf(LOG_TAG, "got sectionName");
                 String articleType = currentNewsStory.getString("type");
-                Log.wtf(LOG_TAG, "got article type");
                 String date = currentNewsStory.getString("webPublicationDate");
-                Log.wtf(LOG_TAG, "got pub date");
                 String url = currentNewsStory.getString("webUrl");
-                Log.wtf(LOG_TAG, "got URL");
                 // Extract the value for the key called "mag"
 //                double magnitude = properties.getDouble("mag");
 //
